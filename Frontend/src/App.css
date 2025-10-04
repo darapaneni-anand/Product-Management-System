@@ -1,0 +1,64 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+/* Products container */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Products container */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: -400px; /* hidden by default */
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  z-index: 2000;
+  transition: right 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* Show toast */
+.toast-show {
+  right: 20px;
+  opacity: 1;
+}
+
+/* Toast type colors */
+.toast.success { background-color: #27ae60; }
+.toast.info { background-color: #2980b9; }
+.toast.error { background-color: #e74c3c; }
